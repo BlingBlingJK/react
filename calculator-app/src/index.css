@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(6rem, auto) repeat(5, 3.5rem);
+  gap: 1.7px;
+  background-color: rgba(255, 192, 203, 0.4);
+  width: calc(24rem + 11px);
+  /* calc里面必须有空格 */
+  margin: 0 auto;
+  border: 3px solid black;
+}
+.output {
+  grid-column: 1 / span 4;
+  display: flex;
+  flex-direction: column;
+  /* 按列对齐 */
+  align-items: flex-end;
+  /* 右对齐 */
+  justify-content: space-around;
+  /* 均匀分配主轴,即相邻元素的间距相等 */
+  padding: 10px;
+  /* 拒绝顶格 */
+  word-wrap: break-word;
+  /* 自动按单词换行 */
+  word-break: break-all;
+  /* 任意位置换行 */
+}
+.last-output {
+  font-size: 1.2rem;
+}
+.current-output {
+  font-size: 3rem;
+}
+.span-32 {
+  grid-column: 3 / span 2;
+  /* 从第3个开始独占2格 */
+}
+.span-12 {
+  grid-column: 1 / span 2;
+  /* 从第1个开始独占2格 */
+}
+.calculator > button {
+  background-color: #f3f2f2;
+}
+/* 加高亮效果 */
+.calculator > button:hover {
+  background-color: rgba(255, 105, 180, 0.4);
+}
+
+/* 登录界面 */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("./pic/R-C2.jpg");
+  background-size: cover;
+}
+.login {
+  width: 550px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.4)
+  );
+  /* 使背景模糊化 */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #a29bfe;
+  border-radius: 15px;
+}
+
+.table {
+  font: 900 40px "";
+  text-align: center;
+  letter-spacing: 5px;
+  color: #3d3d3d;
+}
+
+.box {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  width: 400px;
+  height: 100%;
+  margin-bottom: 25px;
+  outline: none;
+  border: 0;
+  padding: 10px;
+  background-color: transparent;
+  border-bottom: 3px solid rgb(150, 150, 240);
+  font: 900 20px "";
+}
+
+.go {
+  text-align: center;
+  display: block;
+  height: 40px;
+  padding: 2px;
+  font: 900 24px "";
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #fff;
+  letter-spacing: 3px;
+  background-image: linear-gradient(to left, #fd79a8, #a29bf6);
+  text-decoration: none;
+}
+
+.login:hover {
+  width: 600px;
+  height: 500px;
+}
+
+.erro {
+  color: red;
+  padding-left: 10px;
+  font: 700 16px "";
+}
+
+.mima {
+  width: 400px;
+  height: 100%;
+  margin-bottom: 0px;
+  outline: none;
+  border: 0;
+  padding: 10px;
+  background-color: transparent;
+  border-bottom: 3px solid rgb(150, 150, 240);
+  font: 900 20px "";
+}
